@@ -7,6 +7,7 @@ Este repositorio contiene proyectos prácticos diseñados para mejorar mis habil
 ### Proyecto Tabs
 - **Descripción**: Un sistema de pestañas dinámico utilizando HTML, CSS y JavaScript.
 - **Ubicación**: `/proyecto-Tabs`
+- **URL DEL PROYECTO**: https://roadmap.sh/projects/simple-tabs
 
 ### Futuras Adiciones
 1. Proyecto 2
