@@ -1,0 +1,121 @@
+
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #2f4f4f;
+    background-color: #f0f8ff;
+    position: relative;
+}
+
+.header {
+    background-color: #4caf50;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.nav {
+    margin-top: 10px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-item a:hover {
+    color: #dcedc8;
+}
+
+.section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    margin-bottom: 10px;
+    color: #388e3c;
+}
+
+.section p {
+    color: #555;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #4caf50;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.cookie-banner{
+    background-color: rgba(8, 8, 8, 0.8);
+    padding: 10px;
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 1;
+
+    p{
+        font-size: clamp(14px, 2vw, 16px);
+        margin-bottom: 5px;
+    }
+    .btn{
+        font-size: clamp(13px, 2vw, 15px);
+        border-radius: 5px;
+        padding: 5px;
+        margin-top: 5px;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.overlay{
+    background-color: rgba(241, 233, 227, 0.6);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+}
+
+@media screen and (max-width: 510px) {
+    .cookie-banner{
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+        padding: 10px;
+        position: fixed;
+    }
+}

@@ -9,6 +9,11 @@ Este repositorio contiene proyectos prácticos diseñados para mejorar mis habil
 - **Ubicación**: `/proyecto-Tabs`
 - **URL DEL PROYECTO**: https://roadmap.sh/projects/simple-tabs
 
+### Proyecto Cookie Consent
+- **Descripción**: Un sistema de consentimiento de cookies utilizando HTML, CSS y JavaScript.
+- **Ubicación**: `/proyecto-Cookie-Consent`
+- **URL DEL PROYECTO**: https://roadmap.sh/projects/cookie-consent
+
 ### Futuras Adiciones
-1. Proyecto 2
-2. Proyecto 3
+
+3. Proyecto 3
