@@ -1,0 +1,32 @@
+.container {
+    position: relative;
+    max-width: 410px;
+}
+
+.textArea {
+    outline: none;
+    border-radius: 10px;
+    padding: 8px;
+    min-height: 135px;
+    width: 100%;
+    text-align: justify;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.count {
+    display: inline-flex;
+    position: absolute;
+    bottom: 10px;
+    left: calc(100% - 65px);
+    padding: 3px;
+    margin: 0;
+    font-size: 12px;
+
+    span{
+        padding: 2px;
+        display: inline-block;
+        width: 20px;
+        text-align: center;
+    }
+}
