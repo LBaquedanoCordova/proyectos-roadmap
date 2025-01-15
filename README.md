@@ -14,9 +14,12 @@ Este repositorio contiene proyectos prácticos diseñados para mejorar mis habil
 - **Ubicación**: `/proyecto-Cookie-Consent`
 - **URL DEL PROYECTO**: https://roadmap.sh/projects/cookie-consent
 
-### Proyectos Restricted Textarea
+### Proyecto Restricted Textarea
 - **Descripción**: Un sistema de restriccion escritura a 250 caracteres utilizando HTML, CSS y JavaScript.
 - **Ubicación**: `/proyecto-restricted-Textarea`
 - **URL DEL PROYECTO**: https://roadmap.sh/projects/restricted-textarea
 
-3. Proyecto 3
+### Proyecto Accordion
+- **Descripción**: Un sistema de de acordion que muestra el contenido de cada uno al dar click, utilizando HTML, CSS y JavaScript.
+- **Ubicación**: `/proyecto-Accordion`
+- **URL DEL PROYECTO**: https://roadmap.sh/projects/accordion
