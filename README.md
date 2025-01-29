@@ -68,3 +68,19 @@ Una vez instaladas las dependencias, puedes iniciar el proyecto en modo desarrol
 npm run dev
 
 Esto abrirá el proyecto en tu navegador en la dirección predeterminada http://localhost:5173/
+
+### Proyecto Custom dropdown
+- **Descripción**: Este proyecto permite navegar en un menu desplegable, seleccionar un elemento,
+y actualizar el marcador predeterminado.
+
+- **Ubicación**: `/proyecto-Custom-dropdown`
+- **URL DEL PROYECTO**: https://roadmap.sh/projects/custom-dropdown
+
+## Cómo abrir el proyecto
+
+1. Clonar el repositorio
+Asegúrate de tener git instalado en tu máquina y clona este repositorio desde GitHub:
+
+git clone https://github.com/tu-usuario/proyecto-Custom-dropdown.git
+
+2. Abrir en el navegador usando una extension como Live Server, o la opcion por defecto.
