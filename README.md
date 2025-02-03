@@ -84,3 +84,22 @@ Asegúrate de tener git instalado en tu máquina y clona este repositorio desde 
 git clone https://github.com/tu-usuario/proyecto-Custom-dropdown.git
 
 2. Abrir en el navegador usando una extension como Live Server, o la opcion por defecto.
+
+### Proyecto TaskTracker
+- **Descripción**: Este proyecto permite gestionar las tareas a los usuarios:
+-Agregar nuevas tareas.
+-Marcar tareas como completadas.
+-Eliminar tareas de la lista.
+-Mantener las tareas completadas al final y las pendientes al inicio.
+
+- **Ubicación**: `/proyecto-TaskTracker`
+- **URL DEL PROYECTO**: https://roadmap.sh/projects/task-tracker-js
+
+## Cómo abrir el proyecto
+
+1. Clonar el repositorio
+Asegúrate de tener git instalado en tu máquina y clona este repositorio desde GitHub:
+
+git clone https://github.com/tu-usuario/proyecto-TaskTracker.git
+
+2. Abrir en el navegador usando una extension como Live Server, o la opcion por defecto.
