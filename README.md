@@ -103,3 +103,23 @@ Asegúrate de tener git instalado en tu máquina y clona este repositorio desde 
 git clone https://github.com/tu-usuario/proyecto-TaskTracker.git
 
 2. Abrir en el navegador usando una extension como Live Server, o la opcion por defecto.
+
+### Proyecto GitHub Random Repository
+- **Descripción**: Este proyecto permite a los usuarios buscar repositorios en GitHub según el lenguaje de programación seleccionado:
+
+-Mostrar una lista de lenguajes disponibles.
+-Permitir la selección de un lenguaje para filtrar repositorios.
+-Obtener y mostrar información de un repositorio aleatorio del lenguaje elegido.
+-Mostrar nombre, descripción, estrellas, forks y enlace al repositorio en GitHub.
+
+- **Ubicación**: `/proyecto-GitHub-Random-Repository`
+- **URL DEL PROYECTO**: https://roadmap.sh/projects/github-random-repo
+
+## Cómo abrir el proyecto
+
+1. Clonar el repositorio
+Asegúrate de tener git instalado en tu máquina y clona este repositorio desde GitHub:
+
+git clone https://github.com/tu-usuario/github-repository-finder.git
+
+2. Abrir en el navegador usando una extension como Live Server, o la opcion por defecto.

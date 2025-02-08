@@ -1,0 +1,102 @@
+:root{
+    --color: #262649;
+    --padding: 5px 10px;
+    --boder-radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to right, red, pink);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.title{
+    text-align: center;
+    word-spacing: 1.5;
+    color: var(--color);
+    padding: 4px;
+}
+
+.dropdown {
+    width: 10em;
+}
+
+.dropdown, button{
+    border: 1px solid #333;
+    border-radius: var(--boder-radius);
+    padding: var(--padding);
+    outline: none;
+    cursor: pointer;
+    
+}
+
+.dropdown-item {
+    padding: var(--padding);
+    text-align: center;
+    color: #333;
+}
+
+.result{
+    font-weight: 600;
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: var(--boder-radius);
+    line-height: 1.4;
+
+    h2, p, span, a{
+        margin: 5px 0px;
+    }
+
+    h2{
+        font-weight: bolder;
+        color: var(--color);
+    }
+
+    span{
+        background-color: #26264971;
+        padding: var(--padding);
+        border-radius: 10px;
+    }
+    
+
+    a{
+        display: inline-block;
+        color: black;
+    }
+}
+
+i{
+    padding-right: 5px;
+}
+
+.result.error{
+    color: red;
+}
+
+button{
+    font-size: 16px;
+    background-color: cadetblue;
+    transition: all ease 0.4s;
+
+    &:hover{
+        filter: brightness(1.2);
+        background-color: #333;
+        border: 1px solid cadetblue;
+        color: white;
+
+    }
+}
+.refreshBtn-hidden{
+    display: none;
+}
+
