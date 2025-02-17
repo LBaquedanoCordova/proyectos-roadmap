@@ -123,3 +123,28 @@ Asegúrate de tener git instalado en tu máquina y clona este repositorio desde 
 git clone https://github.com/tu-usuario/github-repository-finder.git
 
 2. Abrir en el navegador usando una extension como Live Server, o la opcion por defecto.
+
+### Proyecto reddit-client
+- **Descripción**: 
+Una aplicación web desarrollada con React que actúa como cliente de Reddit, permitiendo visualizar publicaciones de distintos subreddits en "carriles" personalizables. La aplicación permite agregar nuevos subreddits a través de un modal, refrescar la información de cada carril y eliminar carriles existentes mediante una interfaz intuitiva.
+
+## Tecnologías
+
+- **React:** Para la construcción de la interfaz de usuario.
+- **Vite:** Como bundler y servidor de desarrollo.
+- **Fetch API:** Para consumir la API JSON de Reddit.
+- **CSS:** Estilos personalizados sin frameworks externos.
+
+
+- **Ubicación**: `/reddit-client`
+- **URL DEL PROYECTO**: https://roadmap.sh/projects/reddit-client
+
+## Cómo abrir el proyecto
+
+1. Clonar el repositorio
+Asegúrate de tener git instalado en tu máquina y clona este repositorio desde GitHub:
+
+git clone https://github.com/tu-usuario/reddit-client.git
+
+2. Instala las dependencias necesarias utilizando el siguiente comando: npm install
+3. Ejecutar la aplicación en modo desarrollo usando: cd npm run dev
