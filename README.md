@@ -148,3 +148,27 @@ git clone https://github.com/tu-usuario/reddit-client.git
 
 2. Instala las dependencias necesarias utilizando el siguiente comando: npm install
 3. Ejecutar la aplicación en modo desarrollo usando: cd npm run dev
+
+### Proyecto Temperature converter
+- **Descripción**: Converter es una aplicación web que permite convertir valores de temperatura entre diferentes unidades: Celsius, Fahrenheit y Kelvin. La interfaz es intuitiva y permite a los usuarios ingresar un valor de temperatura, seleccionar la unidad deTemperature origen y la unidad de destino, y obtener el resultado de la conversión de manera instantánea.
+
+- **Ubicación**: `/proyecto-Temperature-converter`
+- **URL DEL PROYECTO**: https://roadmap.sh/projects/temperature-converter
+
+## Cómo abrir el proyecto
+
+1. Clonar el repositorio
+
+Asegúrate de tener Git instalado en tu máquina y clona este repositorio desde GitHub:
+
+git clone git@github.com:tu-usuario/proyectos-roadmap.git
+
+O usando HTTPS:
+
+git clone https://github.com/tu-usuario/proyectos-roadmap.git
+
+2. Acceder al directorio del proyecto
+
+cd proyectos-roadmap/proyecto-Temperature-converter
+
+3. Abrir en el navegador usando una extension como Live Server, o la opcion por defecto.

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+    <script src="./src/script.js" defer></script>
+  </head>
+  <body>
+    <h1 class="title">Temperature Converter</h1>
+    <p class="description">Enter the temperature, select units, and submit to convert.</p>
+    <form class="converter-form">
+        <input type="text" class="temperature-input" placeholder="0.00">
+        
+        <select name="from-unit" id="from-unit" class="unit-select">
+            <option value="" disabled selected hidden>From unit</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="celsius">Celsius</option>
+            <option value="kelvin">Kelvin</option>
+        </select>
+        
+        <select name="to-unit" id="to-unit" class="unit-select">
+            <option value="" disabled selected hidden>To unit</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="celsius">Celsius</option>
+            <option value="kelvin">Kelvin</option>
+        </select>
+        
+        <input type="button" class="convert-button" value="Convert" disabled>
+    </form>
+
+    <div class="result-display">
+    </div>
+</body>
+
+</html>

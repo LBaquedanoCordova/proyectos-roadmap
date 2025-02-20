@@ -1,0 +1,123 @@
+:root {
+  --gap: 10px;
+  --border-radius: 8px;
+  --backgrounkd-color: #ff9800;
+  --padding: 20px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.8)
+  );
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: white;
+  font-family: "Arial", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--gap);
+  padding: var(--padding);
+}
+
+.converter-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  text-align: center;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.description {
+  text-align: center;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.temperature-input,
+.unit-select,
+.convert-button {
+  padding: clamp(8px, 2.5vw, 10px);
+  border: none;
+  outline: none;
+  border-radius: var(--border-radius);
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+}
+
+.temperature-input,
+.unit-select {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+.convert-button {
+  background-color: var(--backgrounkd-color);
+  color: white;
+  cursor: not-allowed;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  opacity: 0.5;
+}
+
+.convert-button.enabled {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.convert-button:hover {
+  background-color: var(--backgrounkd-color);
+}
+
+.result-display {
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius);
+  min-height: 40px; /* Ajusta según sea necesario */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  max-width: 100%; /* Opcional, para mejor alineación */
+  padding: calc(var(--padding) - 10px); /* Agrega un poco de espacio alrededor del texto */
+  opacity: 0; /* Inicialmente oculto */
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.result-display.show {
+  opacity: 1; /* Se muestra cuando tiene contenido */
+}
+
+
+@media screen and (max-width: 720px) {
+  body,
+  .converter-form {
+    padding: calc(var(--padding) - 5px);
+  }
+  .converter-form {
+    flex-direction: column;
+  }
+
+  .temperature-input,
+  .unit-select,
+  .convert-button {
+    width: 100%;
+  }
+}
