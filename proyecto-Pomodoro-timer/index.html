@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>25:00-Pomodoro</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type="module" src="src/particles.js"></script>
+    <script type="module" src="src/app.js"></script>
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <div class="content"> 
+      <nav class="timer-nav" aria-label="Timer modes">
+        <ul class="timer-nav__list" role="menubar">
+          <li class="timer-nav__item timer-nav__item--active" role="none">
+            <a href="#" class="timer-nav__link" role="menuitem" data-time="pomodoro" aria-current="page">
+              Pomodoro
+            </a>
+          </li>
+          <li class="timer-nav__item" role="none">
+            <a href="#" class="timer-nav__link" role="menuitem" data-time="shortBreak">
+              Short break
+            </a>
+          </li>
+          <li class="timer-nav__item" role="none">
+            <a href="#" class="timer-nav__link" role="menuitem" data-time="longBreak">
+              Long break
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="time-adjuster" role="region" aria-label="Adjust timer">
+        <ul class="time-adjuster__list" role="list">
+          <li class="time-adjuster__item" role="button" tabindex="0" data-time-increment="5" aria-label="Add 5 minutes">
+            <span>+5</span>
+          </li>
+          <li class="time-adjuster__item" role="button" tabindex="0" data-time-increment="10" aria-label="Add 10 minutes">
+            <span>+10</span>
+          </li>
+          <li class="time-adjuster__item" role="button" tabindex="0" data-time-increment="15" aria-label="Add 15 minutes">
+            <span>+15</span>
+          </li>
+          <li class="time-adjuster__more" role="button" tabindex="0" aria-label="More options">
+            <span class="material-symbols-outlined">more_vert</span>
+          </li>
+        </ul>
+      </div>
+      
+      <main>
+        <div class="timer" aria-live="polite">
+          <span>25</span><span>:</span><span>00</span>
+        </div>
+        
+        <div class="controls">
+          <button id="btn-play" class="btn btn-play" data-action="play" aria-label="Play timer">
+            <span class="material-symbols-outlined" aria-hidden="true">play_arrow</span>
+          </button>
+          <button id="btn-pause" class="btn btn-pause" data-action="pause" aria-label="Pause timer">
+            <span class="material-symbols-outlined" aria-hidden="true">pause</span>
+          </button>
+          <button id="btn-reset" class="btn btn-reset" data-action="reset" aria-label="Reset timer">
+            <span class="material-symbols-outlined" aria-hidden="true">restart_alt</span>
+          </button>
+        </div>
+      </main>
+
+      <section class="task-manager">
+        <div class="task-manager__header">
+          <h2 class="task-manager__title">Task Manager</h2>
+          <nav class="task-manager__nav" aria-label="Task categories">
+            <ul class="task-manager__nav-list" role="list">
+              <li class="task-manager__nav-item">
+                <button id="filter-pending" class="task-manager__filter-btn task-manager__filter-btn--active" aria-pressed="true" aria-label="Show pending tasks"></button>
+              </li>
+              <li class="task-manager__nav-item">
+                <button id="filter-completed" class="task-manager__filter-btn" aria-label="Show completed tasks"></button>
+              </li>
+              <li class="task-manager__nav-item">
+                <span class="task-manager__date">
+                  <time datetime="2025-03-17">17 Mar</time>
+                </span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      
+        <div class="task-manager__content">
+          <p class="task-manager__no-tasks">No tasks for this day</p>
+          <button class="task-manager__add-btn" aria-label="Add a new task">Add a new Task</button>
+          <ul class="task-manager__list">
+            <li class="task-manager__message">No tasks for this day</li>
+          </ul>
+        </div>
+      </section>
+      
+    </div>
+    <dialog class="popup popup--adjust-time" id="timePopup">
+      <div class="popup__content">
+        <h2 id="timePopup-title" class="popup__title">Ajustar tiempo</h2>
+        <p id="timePopup-desc" class="popup__desc">Ingrese un número para incrementar el tiempo.</p>
+    
+        <label for="timePopup-input" class="popup__label">Tiempo (minutos):</label>
+        <input type="text" id="timePopup-input" class="popup__input" placeholder="Ingresa minutos" aria-required="true">
+        <p class="popup__error-message">Ingresa un valor numerico correcto</p>
+        <div class="popup__buttons">
+          <button type="submit" id="timePopup-confirm-btn" class="popup__button--confirm" aria-label="Confirmar tiempo">Confirmar<span class="material-symbols-outlined icon popup__icon">keyboard_return</span></button>
+          <button id="timePopup-close-btn" class="popup__button--cancel" aria-label="Cerrar popup">Cancelar<span class="icon popup__icon">Esc</span></button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="popup popup--add-task" id="addTaskPopup">
+      <div class="popup__content">
+        <h2 id="addTaskPopup-title" class="popup__title">Agregar tareas</h2>
+        <!-- <p id="addTaskPopup-desc" class="popup__desc">Ingrese una nueva tarea</p> -->
+    
+        <label for="task-input" class="popup__label">Describa su nueva tarea:</label>
+        <input type="text" id="task-input" class="popup__input" placeholder="Ingresa tu tarea" aria-required="true">
+        <p class="popup__error-message">Ingresa un valor de mas de 3 caracteres</p>
+        <div class="popup__buttons">
+          <button type="submit" id="addTaskPopup-confirm-btn" class="popup__button popup__button--confirm" aria-label="Agregar tarea">
+            Agregar<span class="material-symbols-outlined icon">keyboard_return</span>
+          </button>
+          <button id="addTaskPopup-close-btn" class="popup__button popup__button--cancel" aria-label="Cerrar popup">
+            Cancelar<span class="icon">Esc</span>
+          </button>
+        </div>
+      </div>
+    </dialog>
+    <!-- <link type="image/png" sizes="16x16" rel="icon" href=".../icons8-esc-win10-16.png"> -->
+    <!-- <div class="unique">hola</div> -->
+  </body>
+</html>

@@ -1,0 +1,257 @@
+.task-manager {
+  flex-direction: column;
+  gap: var(--gap);
+  padding: var(--padding);
+  backdrop-filter: blur(var(--blur));
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 620px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.task-manager__header {
+  background-color: var(--bg-highlight);
+  width: 100%;
+  padding: var(--padding);
+  border-radius: var(--radius);
+  text-align: center;
+  color: var(--color-white);
+}
+
+.task-manager__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.task-manager__nav {
+  margin-top: 5px;
+  padding: 4px 8px;
+}
+
+.task-manager__nav-list {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.task-manager__nav-item {
+  flex-wrap: wrap;
+  font-size: clamp(13px, 2.8vw, 16px);
+  padding: 4px 6px;
+  list-style: none;
+  height: 40px;
+  flex: 1 0 auto;
+}
+
+.task-manager__filter-btn,
+.task-manager__date {
+  border: 1px solid var(--color-white);
+  border-radius: 4px;
+  padding: 5px 10px;
+  color: var(--color-white);
+
+
+  background-color: transparent;/* CHNCA */
+  outline: none;
+  height: 28px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.task-manager__filter-btn--active {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+}
+
+#filter-pending::before{
+  content: "P";
+}
+
+#filter-completed::before{
+  content: "C";
+}
+
+.task-manager__date {
+  width: max-content;
+  white-space: nowrap;
+}
+
+.task-manager__date time {
+  display: inline-block;
+  flex: none;
+  padding: 0 5px;
+  white-space: nowrap;
+}
+
+.task-manager__content {
+  background-color: var(--bg-highlight);
+  width: 100%;
+  padding: var(--padding);
+  border-radius: var(--radius);
+  text-align: center;
+  color: var(--color-white);
+  min-height: 150px;
+}
+
+.task-manager__no-tasks {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.task-manager__add-btn {
+  margin-top: 15px;
+  border: 1px solid var(--color-white);
+  border-radius: 4px;
+  padding: 5px 10px;
+  color: var(--color-white);
+  background-color: transparent;
+  outline: none;
+  height: 28px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.task-manager__list {
+  margin-top: 15px;
+  padding: 5px;
+}
+
+.task-manager__list-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+  margin: 0px 5px;
+  list-style: none;
+}
+
+.task-manager__text {
+  margin: 0px 5px;
+  font-size: clamp(15px, 2.5vw, 17px);
+  padding: 5px;
+  text-align: start;
+}
+
+.task-manager__actions {
+  display: inline-flex;
+  margin-left: auto;
+  gap: 5px;
+}
+
+span.task-manager__icon {
+  padding: 4px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#task-manager__icon--status{
+  margin-right: 4px;
+}
+
+.task-manager__message {
+  color: #ffffffb4;
+  font-style: italic;
+  list-style: none;
+}
+
+.task-manager__editor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.task-manager__editor-input {
+  border: 1px solid transparent;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--color-white);
+  outline: none;
+  border-radius: calc(var(--radius) - 5px);
+  margin: 0px 5px;
+  font-size: clamp(15px, 2.5vw, 17px);
+  padding: 5px;
+  width: 100%;
+}
+
+.task-manager__editor-input.error {
+  border-color: red;
+}
+
+.task-manager__editor-buttons {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.task-manager__editor-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+  padding: 4px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--popup-transition);
+}
+
+span.task-manager__editor-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(var(--radius) - 5px);
+  color: white;
+  padding: 2px 4px;
+  font-size: 12px;
+  font-weight: 400;
+  width: 30px;
+  height: 20px;
+}
+
+@media (min-width: 400px) {
+
+  #filter-pending::before{
+    content: none;
+  }
+
+  #filter-pending::after{
+    content: 'Pendiente';
+  }
+
+  #filter-completed::before{
+    content: none;
+  }
+
+  #filter-completed::after{
+    content: 'Completed';
+  }
+
+  /* forma parte de content */
+  .task-manager__list {
+    padding: var(--padding);
+  }
+  .task-manager__list-item {
+    margin: 0px 15px;
+  }
+  .task-manager__editor-icon {
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-left: 4px;
+  }
+  .task-manager__editor-button--save::before {
+    content: 'Guardar';
+  }
+  .task-manager__editor-button--cancel::before {
+    content: 'Salir';
+  }
+}

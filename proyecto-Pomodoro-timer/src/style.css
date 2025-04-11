@@ -1,0 +1,108 @@
+@import url(popup.css);
+@import url(navbar.css);
+@import url(timer.css);
+@import url(adjust-time.css);
+@import url(task-section.css);
+
+:root {
+  --gap: 10px;
+  --padding: 10px;
+  --radius: 10px;
+  --bg-highlight: rgba(255, 217, 0, 0.5);
+  --blur: 3px;
+  --color-white: #ffffff;
+
+  --highlight-opacity: 0.2;
+  --highlight-width: 75px;
+  --highlight-height: 155px;
+
+  --translate-x-start: -105px;
+  --translate-x-end: calc(120% + 450px);
+  --translate-y: -60px;
+  --rotation: 45deg;
+
+  --transition-speed: 750ms;
+  --transition-hover-speed: 650ms;
+  --transition-easing: cubic-bezier(0.19, 1, 0.22, 1);
+
+  /* variables para el poput */
+  --popup-bg: rgba(0, 0, 0, 0.6);
+  --popup-content-bg: #1e1e2f;
+  --popup-text-color: #ffffff;
+  --popup-border-radius: 12px;
+  --popup-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  --popup-padding: 20px;
+  --popup-transition: 0.3s ease-in-out;
+  --btn-bg: #b99f0a;
+  --btn-hover-bg: #e7bc0f;
+  --btn-cancel-bg: #444;
+  --btn-cancel-hover-bg: #666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.timer-nav__item {
+  background-color: var(--bg-highlight);
+  backdrop-filter: blur(var(--blur));
+  border-radius: var(--radius);
+}
+
+.timer-nav__list,
+.timer-nav__item,
+/* .adjust-time .adjust-time-list, */
+.time-adjuster__list,
+/* .adjust-time-list .adjust-time-item span, */
+.time-adjuster__item span,
+/* .adjust-time-list .adjust-time-button, */
+.time-adjuster__more,
+/* .adjust-time-list .adjust-time-button span, */
+.time-adjuster__more span,
+/* .adjust-time-item, */
+.time-adjuster__item,
+/* .adjust-time-button, */
+.time-adjuster__more,
+/* .adjust-time-list, */
+.controls .btn span,
+.task-manager,
+.task-manager__header .task-manager__nav-item,
+.task-manager__nav-item .task-manager__date{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #1a1a2e;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: var(--color-white);
+  text-align: center;
+  padding: calc(var(--padding) + 5px);
+
+  .timer-nav .timer-nav__list,
+  /* .adjust-time .adjust-time-list */ .time-adjuster .time-adjuster__list {
+    list-style: none;
+    flex-wrap: wrap;
+    gap: var(--gap);
+  }
+
+}
