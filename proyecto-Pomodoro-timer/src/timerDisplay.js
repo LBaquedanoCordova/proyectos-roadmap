@@ -1,7 +1,9 @@
 import { timerState } from "./timerState.js";
 import { Timer } from "./timer.js";
 
-const timerDisplay = document.querySelector(".timer");
+//?este elemento ya se tiene en menubar, considerar una exportacion
+
+const timerDisplay = document.querySelector(".pomodoro-app__timer");
 
 function updateTimerDisplay (minutes, seconds) {
     const formattedMinutes = String(minutes).padStart(2, "0");

@@ -1,15 +1,15 @@
 import { changeMode } from "./menubar.js";
 
-const controls = document.querySelector(".controls");
+const controls = document.querySelector(".pomodoro-app__controls");
 const btnPlay = controls.querySelector("#btn-play");
 const btnPause = controls.querySelector("#btn-pause");
 const btnReset = controls.querySelector("#btn-reset");
 
 // Alterna la visibilidad de los botones según el estado del temporizador
 function toggleButtons (play, pause, reset) {
-    btnPlay.classList.toggle("btn-play-hidden", !play);
-    btnPause.classList.toggle("btn-pause", !pause);
-    btnReset.classList.toggle("btn-reset", !reset);
+    btnPlay.classList.toggle("pomodoro-app__btn--play--hidden", !play);
+    btnPause.classList.toggle("pomodoro-app__btn--pause", !pause);
+    btnReset.classList.toggle("pomodoro-app__btn--reset", !reset);
 };
 
 // Actualiza el botón de pausa entre "pausa" y "reanudar"
@@ -25,7 +25,7 @@ function setupControls(timer, timerState, timerModes) {
   // Agrega un evento de escucha a los controles del temporizador
   controls.addEventListener("click", (e) => {
     //? mejorar la busqueda del button, que no sea por elemento, si no por selector
-    const button = e.target.closest("button");
+    const button = e.target.closest(".pomodoro-app__btn");
     const action = button?.dataset.action;
 
     if (!button || !action) return; // Si no es un botón válido, sale de la función

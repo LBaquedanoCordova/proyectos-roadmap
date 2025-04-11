@@ -13,7 +13,9 @@ function isValid(value) {
 // Muestra u oculta el mensaje de error
 function toggleErrorMessage(show) {
     const errorMessage = popupTask.querySelector('.popup__error-message');
-    errorMessage.classList.toggle('show', show);
+    // errorMessage.classList.toggle('show', show);
+    errorMessage.classList.toggle('popup__error-message--show', show);
+    
 }
 
 // Maneja el evento input para validar en tiempo real después de un intento fallido

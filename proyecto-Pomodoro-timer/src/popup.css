@@ -59,7 +59,10 @@
         opacity: 0;
       }
   
-      .popup__error-message.show {
+      /* .popup__error-message.show {
+        opacity: 1;
+      } */
+      .popup__error-message.popup__error-message--show {
         opacity: 1;
       }
   
@@ -114,7 +117,15 @@
         }
       }
     }
-    &.show {
+    /* &.show {
+      display: flex;
+  
+      .popup__content {
+        opacity: 1;
+        transform: scale(1);
+      }
+    } */
+    &.popup-show {
       display: flex;
   
       .popup__content {

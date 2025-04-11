@@ -181,7 +181,11 @@ span.task-manager__icon {
   width: 100%;
 }
 
-.task-manager__editor-input.error {
+/* .task-manager__editor-input.error {
+  border-color: red;
+} */
+
+.task-manager__editor-input.task-manager__editor-input--error {
   border-color: red;
 }
 

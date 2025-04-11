@@ -30,17 +30,15 @@ function saveEdit(input, editContainer, taskItem) {
 
   const taskListItems = taskItem.closest('.task-manager__list').children;
 
-  const index = [...taskListItems].indexOf(taskItem); // Encuentra el índice de la tarea.
-  tasks[index].description = newText; // Actualiza la descripción en la lista de tareas.
+  const index = [...taskListItems].indexOf(taskItem);
+  tasks[index].description = newText;
 }
 
 
 function handleInput(input) { 
-  // Verifica si la longitud del input es válida
   const { isValidLength } = validateInput(input);
 
-  // Agrega o quita la clase "error" según la validez del input
-  input.classList.toggle('error', !isValidLength)
+  input.classList.toggle('task-manager__editor-input--error', !isValidLength)
 }
 
 // Maneja la lógica de guardar o cancelar la edición de la tarea
@@ -62,14 +60,14 @@ function processEdit(action, input, editContainer, textElement, taskItem) {
 // Maneja la acción de presionar una tecla, específicamente "Enter" o "Escape"
 function handleKeyDown(event, input, editContainer, textElement, taskItem) {
   const { key } = event;
-  if (key === "Enter") return processEdit("save", input, editContainer, textElement, taskItem); // Guardar si es Enter
-  if (key === "Escape") return processEdit("cancel", input, editContainer, textElement, taskItem); // Cancelar si es Escape
+  if (key === "Enter") return processEdit("save", input, editContainer, textElement, taskItem);
+  if (key === "Escape") return processEdit("cancel", input, editContainer, textElement, taskItem);
 }
 
 // Maneja el click en los botones de guardar o cancelar
 function handleClick(event, input, editContainer, textElement, taskItem) {
   const button = event.target.closest(".task-manager__editor-button--save, .task-manager__editor-button--cancel");
-  if (!button) return; // Si no se hace clic en un botón válido, salir
+  if (!button) return;
 
   // Determina la acción a realizar dependiendo del tipo de botón
   const action = button.classList.contains("task-manager__editor-button--save") ? "save" : "cancel";
@@ -86,9 +84,8 @@ function createEditContainer(textElement, taskItem) {
     return element;
   }
 
-  const editContainer = createElement("div", "task-manager__editor"); // Contenedor del editor
+  const editContainer = createElement("div", "task-manager__editor");
 
-  // Crea el campo de entrada de texto
   const input = createElement("input", "task-manager__editor-input");
   input.type = "text";
   input.value = textElement.textContent;
@@ -98,11 +95,10 @@ function createEditContainer(textElement, taskItem) {
   );
   input.addEventListener("input", () => handleInput(input));
 
-  const buttonContainer = createElement("div", "task-manager__editor-buttons"); // Contenedor de botones
+  const buttonContainer = createElement("div", "task-manager__editor-buttons");
 
   buttonContainer.addEventListener('click', e => handleClick(e, input, editContainer, textElement, taskItem));
 
-  // Crea los íconos de cancelación y guardar
   const escIcon = createElement(
     "span",
     "task-manager__editor-icon task-manager__editor-icon--cancel",
@@ -114,7 +110,6 @@ function createEditContainer(textElement, taskItem) {
     "keyboard_return"
   );
 
-  // Crea los botones de guardar y cancelar
   const saveButton = createElement(
     "button",
     "task-manager__editor-button task-manager__editor-button--save",
@@ -135,17 +130,13 @@ function createEditContainer(textElement, taskItem) {
 }
 
 function editTask(target) {
-  // Encuentra el elemento de la tarea más cercano
   const taskItem = target.closest(".task-manager__list-item");
 
-  // Si ya hay un editor activo en la tarea, no hace nada
   if (taskItem.querySelector(".task-manager__editor")) return;
 
-  // Obtiene el texto actual de la tarea y crea el editor de edición
   const textElement = taskItem.querySelector(".task-manager__text");
   const container = createEditContainer(textElement, taskItem);
 
-  // Reemplaza el texto de la tarea con el editor y enfoca el input
   textElement.replaceWith(container);
   container.querySelector(".task-manager__editor-input").focus();
 }

@@ -51,25 +51,41 @@
           </li>
         </ul>
       </div>
-      
-      <main>
-        <div class="timer" aria-live="polite">
-          <span>25</span><span>:</span><span>00</span>
+
+      <main class="pomodoro-app" role="main">
+        <div class="pomodoro-app__timer" aria-live="polite" aria-label="Timer display">
+          <span class="pomodoro-app__time pomodoro-app__time--minutes">25</span>
+          <span class="pomodoro-app__time pomodoro-app__time--separator">:</span>
+          <span class="pomodoro-app__time pomodoro-app__time--seconds">00</span>
         </div>
-        
-        <div class="controls">
-          <button id="btn-play" class="btn btn-play" data-action="play" aria-label="Play timer">
+      
+        <div class="pomodoro-app__controls" role="group" aria-label="Timer controls">
+          <button 
+            id="btn-play" 
+            class="pomodoro-app__btn pomodoro-app__btn--play" 
+            data-action="play" 
+            aria-label="Play timer">
             <span class="material-symbols-outlined" aria-hidden="true">play_arrow</span>
           </button>
-          <button id="btn-pause" class="btn btn-pause" data-action="pause" aria-label="Pause timer">
+      
+          <button 
+            id="btn-pause" 
+            class="pomodoro-app__btn pomodoro-app__btn--pause" 
+            data-action="pause" 
+            aria-label="Pause timer">
             <span class="material-symbols-outlined" aria-hidden="true">pause</span>
           </button>
-          <button id="btn-reset" class="btn btn-reset" data-action="reset" aria-label="Reset timer">
+      
+          <button 
+            id="btn-reset" 
+            class="pomodoro-app__btn pomodoro-app__btn--reset" 
+            data-action="reset" 
+            aria-label="Reset timer">
             <span class="material-symbols-outlined" aria-hidden="true">restart_alt</span>
           </button>
         </div>
       </main>
-
+      
       <section class="task-manager">
         <div class="task-manager__header">
           <h2 class="task-manager__title">Task Manager</h2>

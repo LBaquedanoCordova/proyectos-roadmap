@@ -22,11 +22,11 @@ function createMessage(textMessage = "No tasks for this day") {
 function deleteTask(target, taskList, buttonPending, manageEmptyMessage) {
   const taskItem = target.closest(".task-manager__list-item");
 
-  const taskListItems = [...taskList.children]; // Convierte HTMLCollection en array
+  const taskListItems = [...taskList.children];
   const index = taskListItems.indexOf(taskItem);
 
-  if (index !== -1) tasks.splice(index, 1); // Elimina la tarea del array
-  taskItem.remove(); // Elimina la tarea del DOM
+  if (index !== -1) tasks.splice(index, 1);
+  taskItem.remove();
 
   const filter = buttonPending.classList.contains(
     "task-manager__filter-btn--active"

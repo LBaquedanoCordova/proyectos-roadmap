@@ -1,14 +1,13 @@
 import { timerModes } from "./timerState.js";
 
 const navContainer = document.querySelector(".timer-nav__list");
-const timerElem = document.querySelector(".timer");
+const timerElem = document.querySelector(".pomodoro-app__timer");
 
 // Actualiza la pantalla del temporizador con los valores del modo seleccionado
 const updateTimerDisplay = (mode) => {
   const { minutes, seconds } = timerModes[mode];
   timerElem.firstElementChild.textContent = minutes;
   timerElem.lastElementChild.textContent = seconds;
-
 };
 
 // Cambia el modo del temporizador y reinicia sus valores
@@ -48,6 +47,5 @@ const handleNavClick = (e) => {
   if (mode)
     document.dispatchEvent(new CustomEvent("changeMode", { detail: mode }));
 };
-
 
 navContainer.addEventListener('click', handleNavClick);
