@@ -8,11 +8,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.css"> de prueba -->
-
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script type="module" src="src/js/particles.js"></script>
-     <script type="module" src="src/js/main.js"></script>
+    <script type="module" src="/src/js/particles.js"></script>
+     <script type="module" src="/src/js/main.js"></script>
 
   </head>
   <body>
@@ -56,7 +54,7 @@
 
       <main class="pomodoro-app" role="main">
         <div class="pomodoro-app__timer" aria-live="polite" aria-label="Timer display">
-          <span class="pomodoro-app__time pomodoro-app__time--minutes">01</span>
+          <span class="pomodoro-app__time pomodoro-app__time--minutes">25</span>
           <span class="pomodoro-app__time pomodoro-app__time--separator">:</span>
           <span class="pomodoro-app__time pomodoro-app__time--seconds">00</span>
         </div>
@@ -94,11 +92,9 @@
           <nav class="task-manager__nav" aria-label="Task categories">
             <ul class="task-manager__nav-list" role="list">
               <li class="task-manager__nav-item">
-                <!-- <button id="filter-pending" class="task-manager__filter-btn task-manager__filter-btn--active" aria-pressed="true" aria-label="Show pending tasks"></button> -->
                 <button id="filter-pending" class="task-manager__filter-btn task-manager__filter-btn--active" aria-pressed="true" aria-label="Show pending tasks">Pending</button>
               </li>
               <li class="task-manager__nav-item">
-                <!-- <button id="filter-completed" class="task-manager__filter-btn" aria-label="Show completed tasks"></button> -->
                 <button id="filter-completed" class="task-manager__filter-btn" aria-label="Show completed tasks">Completed</button>
               </li>
               <li class="task-manager__nav-item">
@@ -136,8 +132,6 @@
     <dialog class="popup popup--add-task" id="addTaskPopup">
       <div class="popup__content">
         <h2 id="addTaskPopup-title" class="popup__title">Agregar tareas</h2>
-        <!-- <p id="addTaskPopup-desc" class="popup__desc">Ingrese una nueva tarea</p> -->
-    
         <label for="task-input" class="popup__label">Describa su nueva tarea:</label>
         <input type="text" id="task-input" class="popup__input" placeholder="Ingresa tu tarea" aria-required="true">
         <p class="popup__error-message">Ingresa un valor de mas de 3 caracteres</p>
@@ -151,8 +145,6 @@
         </div>
       </div>
     </dialog>
-    <!-- <link type="image/png" sizes="16x16" rel="icon" href=".../icons8-esc-win10-16.png"> -->
-    <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.js"></script>
     
   </body>
 </html>
