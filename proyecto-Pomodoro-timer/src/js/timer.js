@@ -1,5 +1,5 @@
 export class Timer { 
-  constructor(minutes, seconds, onUpdate) {
+  constructor(minutes, seconds, onUpdate, onFinishSound, resetControlButtons) {
     this.update = this.update.bind(this);
     this.totalSeconds = Number(minutes) * 60 + Number(seconds) || 0;
     this.remainingSeconds = this.totalSeconds;
@@ -10,8 +10,8 @@ export class Timer {
     this.pausedAt = null;
     this.isRunning = false;
     this.onUpdate = onUpdate;
-
-    document.addEventListener("visibilitychange", () => this.handleVisibilityChange());
+    this.onFinishSound = onFinishSound;
+    this.resetControlButtons = resetControlButtons;
   }
 
   start() {
@@ -45,11 +45,13 @@ export class Timer {
     } else {
       this.timerId = null;
       this.isRunning = false;
+      if (this.resetControlButtons) this.resetControlButtons(true, false, false);
+      if (this.onFinishSound) this.onFinishSound();
     }
   }
 
   handleVisibilityChange() {
-    if (!this.totalSeconds) return;//new
+    if (!this.totalSeconds) return;
 
     if (document.hidden) {
       if (this.isRunning && !this.isPaused) {
@@ -58,6 +60,8 @@ export class Timer {
         this.intervalId = setInterval(() => {
           this.remainingSeconds--;
           if (this.remainingSeconds <= 0) {
+            if (this.resetControlButtons) this.resetControlButtons(true, false, false);
+            if (this.onFinishSound) this.onFinishSound();
             clearInterval(this.intervalId);
             this.intervalId = null;
             this.isRunning = false;

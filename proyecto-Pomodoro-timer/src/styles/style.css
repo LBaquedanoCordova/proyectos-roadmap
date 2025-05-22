@@ -9,8 +9,10 @@
   --padding: 10px;
   --radius: 10px;
   --bg-highlight: rgba(255, 217, 0, 0.5);
+  --bg-color-black: rgba(0, 0, 0, 0.3);
   --blur: 3px;
   --color-white: #ffffff;
+  --fs-icon: 14px;
 
   --highlight-opacity: 0.2;
   --highlight-width: 75px;
@@ -46,41 +48,10 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.timer-nav__item {
-  background-color: var(--bg-highlight);
-  backdrop-filter: blur(var(--blur));
-  border-radius: var(--radius);
-}
-
-.timer-nav__list,
-.timer-nav__item,
-/* .adjust-time .adjust-time-list, */
-.time-adjuster__list,
-/* .adjust-time-list .adjust-time-item span, */
-.time-adjuster__item span,
-/* .adjust-time-list .adjust-time-button, */
-.time-adjuster__more,
-/* .adjust-time-list .adjust-time-button span, */
-.time-adjuster__more span,
-/* .adjust-time-item, */
-.time-adjuster__item,
-/* .adjust-time-button, */
-.time-adjuster__more,
-/* .adjust-time-list, */
-.pomodoro-app__btn span,
-.task-manager,
-.task-manager__header .task-manager__nav-item,
-.task-manager__nav-item .task-manager__date{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 body {
   background-color: #1a1a2e;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-
 
 #particles-js {
   position: fixed;
@@ -97,12 +68,34 @@ body {
   color: var(--color-white);
   text-align: center;
   padding: calc(var(--padding) + 5px);
+}
 
-  .timer-nav .timer-nav__list,
-  /* .adjust-time .adjust-time-list */ .time-adjuster .time-adjuster__list {
-    list-style: none;
-    flex-wrap: wrap;
-    gap: var(--gap);
-  }
+.timer-nav__item {
+  background-color: var(--bg-highlight);
+  backdrop-filter: blur(var(--blur));
+  border-radius: var(--radius);
+}
 
+.timer-nav__list,
+.timer-nav__item,
+.time-adjuster__list,
+.time-adjuster__item span,
+.time-adjuster__more,
+.time-adjuster__more span,
+.time-adjuster__item,
+.time-adjuster__more,
+.pomodoro-app__btn span,
+.task-manager,
+.task-manager__header .task-manager__nav-item,
+.task-manager__nav-item .task-manager__date, .task-manager__nav-list, .task-manager__list-item, .task-manager__editor, .task-manager__editor-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-nav__list,
+.time-adjuster__list {
+  list-style: none;
+  flex-wrap: wrap;
+  gap: var(--gap);
 }

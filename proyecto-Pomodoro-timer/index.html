@@ -4,14 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>25:00-Pomodoro</title>
-    <link rel="stylesheet" href="src/style.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.css"> de prueba -->
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script type="module" src="src/particles.js"></script>
-    <script type="module" src="src/app.js"></script>
+    <script type="module" src="src/js/particles.js"></script>
+     <script type="module" src="src/js/main.js"></script>
+
   </head>
   <body>
     <div id="particles-js"></div>
@@ -54,7 +56,7 @@
 
       <main class="pomodoro-app" role="main">
         <div class="pomodoro-app__timer" aria-live="polite" aria-label="Timer display">
-          <span class="pomodoro-app__time pomodoro-app__time--minutes">25</span>
+          <span class="pomodoro-app__time pomodoro-app__time--minutes">01</span>
           <span class="pomodoro-app__time pomodoro-app__time--separator">:</span>
           <span class="pomodoro-app__time pomodoro-app__time--seconds">00</span>
         </div>
@@ -92,25 +94,25 @@
           <nav class="task-manager__nav" aria-label="Task categories">
             <ul class="task-manager__nav-list" role="list">
               <li class="task-manager__nav-item">
-                <button id="filter-pending" class="task-manager__filter-btn task-manager__filter-btn--active" aria-pressed="true" aria-label="Show pending tasks"></button>
+                <!-- <button id="filter-pending" class="task-manager__filter-btn task-manager__filter-btn--active" aria-pressed="true" aria-label="Show pending tasks"></button> -->
+                <button id="filter-pending" class="task-manager__filter-btn task-manager__filter-btn--active" aria-pressed="true" aria-label="Show pending tasks">Pending</button>
               </li>
               <li class="task-manager__nav-item">
-                <button id="filter-completed" class="task-manager__filter-btn" aria-label="Show completed tasks"></button>
+                <!-- <button id="filter-completed" class="task-manager__filter-btn" aria-label="Show completed tasks"></button> -->
+                <button id="filter-completed" class="task-manager__filter-btn" aria-label="Show completed tasks">Completed</button>
               </li>
               <li class="task-manager__nav-item">
-                <span class="task-manager__date">
-                  <time datetime="2025-03-17">17 Mar</time>
-                </span>
+                <input type="text" class="task-manager__input" data-role="task-date">
+                <span class="task-manager__date" id="task-manager__date">All Tasks</span>
               </li>
             </ul>
           </nav>
         </div>
       
         <div class="task-manager__content">
-          <p class="task-manager__no-tasks">No tasks for this day</p>
+          <p class="task-manager__content--title">No tasks for this day</p>
           <button class="task-manager__add-btn" aria-label="Add a new task">Add a new Task</button>
           <ul class="task-manager__list">
-            <li class="task-manager__message">No tasks for this day</li>
           </ul>
         </div>
       </section>
@@ -150,6 +152,7 @@
       </div>
     </dialog>
     <!-- <link type="image/png" sizes="16x16" rel="icon" href=".../icons8-esc-win10-16.png"> -->
-    <!-- <div class="unique">hola</div> -->
+    <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.js"></script>
+    
   </body>
 </html>

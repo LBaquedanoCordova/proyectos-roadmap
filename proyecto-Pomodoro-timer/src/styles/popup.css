@@ -1,0 +1,131 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--popup-bg);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+
+.popup__content {
+  width: 90%;
+  max-width: 400px;
+  padding: var(--popup-padding);
+  border-radius: var(--popup-border-radius);
+  box-shadow: var(--popup-shadow);
+  text-align: center;
+  background-color: var(--popup-content-bg);
+  color: var(--popup-text-color);
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.popup__title {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.popup__desc {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.popup__label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.popup__input {
+  width: 100%;
+  padding: var(--padding);
+  border: 1px solid #ccc;
+  border-radius: calc(var(--radius) - 2px);
+  font-size: 1rem;
+  background-color: #2a2a3b;
+  color: #fff;
+  outline: none;
+}
+
+.popup__input:focus {
+  border-color: var(--btn-bg);
+}
+
+.popup__error-message {
+  font-size: 14px;
+  color: red;
+  opacity: 0;
+}
+
+.popup__error-message--show {
+  opacity: 1;
+}
+
+.popup__buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.popup__buttons button {
+  flex: 1;
+  padding: var(--padding);
+  border: none;
+  border-radius: calc(var(--radius) - 2px);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--popup-transition);
+}
+
+.popup__buttons button span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 20px;
+  margin-left: 4px;
+  padding: 2px 4px;
+  border-radius: calc(var(--radius) - 5px);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#timePopup-confirm-btn,
+#addTaskPopup-confirm-btn {
+  background-color: var(--btn-bg);
+  color: #000;
+}
+
+#timePopup-confirm-btn:hover,
+#addTaskPopup-confirm-btn:hover {
+  background-color: var(--btn-hover-bg);
+}
+
+#timePopup-close-btn,
+#addTaskPopup-close-btn {
+  background-color: var(--btn-cancel-bg);
+  color: #fff;
+}
+
+#timePopup-close-btn:hover,
+#addTaskPopup-close-btn:hover {
+  background-color: var(--btn-cancel-hover-bg);
+}
+
+.popup-show {
+  display: flex;
+}
+
+.popup-show .popup__content {
+  opacity: 1;
+  transform: scale(1);
+}

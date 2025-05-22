@@ -1,0 +1,32 @@
+.pomodoro-app__timer {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffd700;
+  text-shadow: 0px 0px 15px rgba(255, 215, 0, 0.8);
+}
+
+.pomodoro-app__btn {
+  border: none;
+  padding: 4px;
+  background-color: transparent;
+}
+
+.pomodoro-app__btn--play--hidden, .pomodoro-app__btn--pause, .pomodoro-app__btn--reset {
+  display: none;
+}
+
+.pomodoro-app__btn span {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-size: 3rem;
+  color: var(--color-white);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  
+}
+
+.pomodoro-app__btn:hover span {
+  color: #ffa500;
+}
