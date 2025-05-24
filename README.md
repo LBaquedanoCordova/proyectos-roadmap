@@ -172,3 +172,52 @@ git clone https://github.com/tu-usuario/proyectos-roadmap.git
 cd proyectos-roadmap/proyecto-Temperature-converter
 
 3. Abrir en el navegador usando una extension como Live Server, o la opcion por defecto.
+
+### Proyecto Pomodoro App
+- **Descripción**: Pomodoro App es una aplicación web basada en la técnica de productividad Pomodoro. Permite gestionar sesiones de trabajo y descanso de forma eficiente, personalizar los tiempos, y organizar tareas con una lista inteligente. Incorpora funcionalidades modernas como almacenamiento local, filtros por estado y fecha, y una experiencia interactiva y amigable.
+
+- **Ubicación**: `/proyecto-Pomodoro-timer`
+- **URL DEL PROYECTO**: https://roadmap.sh/projects/pomodoro-timer
+
+## Funcionalidades principales:
+
+### Timer Pomodoro
+
+Modos: Pomodoro (25 min), Short Break (5 min), Long Break (15 min)
+
+Controles: Iniciar, Pausar, Reanudar, Resetear
+
+Extensiones de tiempo: +5 min, +10 min, +15 min o personalizado (mediante pop-up)
+
+### Gestión de tareas
+-Añadir tareas con nombre y fecha
+-Editar tareas existentes
+-Eliminar tareas
+-Marcar tareas como pendiente o completada
+-Guardado automático en Local Storage
+-Filtros por estado (pendiente/completada) y por fecha
+
+## Cómo abrir el proyecto
+
+1. Clonar el repositorio
+
+Asegúrate de tener Git instalado en tu máquina y clona este repositorio desde GitHub:
+
+git clone git@github.com:tu-usuario/proyectos-roadmap.git
+
+O usando HTTPS:
+
+git clone https://github.com/tu-usuario/proyectos-roadmap.git
+
+2. Acceder al directorio del proyecto
+
+cd proyectos-roadmap/proyecto-Pomodoro-timer
+
+3. Instalar dependencias
+Este proyecto usa Vite como bundler y tambien Flatpickr para la selección de fechas en la gestión de tareas, por lo tanto es necesario instalar también esa dependencia.
+npm install
+
+4. Ejecutar el servidor de desarrollo:
+
+npm run dev
+Esto abrirá la app en tu navegador en http://localhost:5173 (o el puerto que Vite indique).
