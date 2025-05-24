@@ -39,8 +39,6 @@
 }
 
 .timer-nav__item--active .timer-nav__link {
-  text-decoration: underline;
-  font-style: italic;
-  font-weight: bold;
-  transition: all 0.3s ease-in-out;
+  color: #1a1a2e;
+  transition: color 0.3s ease-in-out;
 }
